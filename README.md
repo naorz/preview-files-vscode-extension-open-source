@@ -35,6 +35,8 @@ This extension currently supports:
 
 ![image](images-working-gif.gif)
 
+![image](textgif.gif)
+
 
 ## Extension Settings
 
