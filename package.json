@@ -2,12 +2,15 @@
 	"name": "previewfiles",
 	"displayName": "PreviewFiles",
 	"description": "",
-	"version": "0.0.1",
+	"icon": "icon.png",
+	"version": "1.0.1",
+	"publisher": "MaayanAndEden",
 	"engines": {
 		"vscode": "^1.45.0"
 	},
 	"categories": [
-		"Other"
+		"Other",
+		"Themes"
 	],
 	"activationEvents": [
 		"onCommand:extension.previewHover"
@@ -22,7 +25,16 @@
 			{
 				"command": "previewHover.newTabCommand",
 				"title": "newTabCommand"
+			},
+			{
+				"command": "previewHover.cssFileEditorCommand",
+				"title": "cssFileEditorCommand"
+			},
+			{
+				"command": "previewHover.textFileEditorCommand",
+				"title": "textFileEditorCommand"
 			}
+				
 		]
 	},
 	
