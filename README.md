@@ -1,8 +1,7 @@
 # Preview Files README
 
-This is our computer science Bachelor degree final project.
-We developed an extension for visual studio code that currently previews images and youtube videos.
-We made our project an open source for other people to try and expand our extension to similar features (Pdf files, office file etc.)
+This is an extension for visual studio code.
+Currently we support previewing images, Css files, text files and youtube videos.
 
 ## Features
 
@@ -14,7 +13,7 @@ This extension currently supports:
   * View image in browser.
   * Image preview when hovering.
   
-+ Local images (only explicit path)
++ Local images (explicit and relative path)
 
   * View image in a new tab.
   * Image preview when hovering.
@@ -24,6 +23,13 @@ This extension currently supports:
   * Open video in browser.
   * Video thumbnail preview when hovering.
   
++ CSS files (currently only some relative paths)
+
+  * Open Css files in a new tab (on clicking a button when hovering).
+  
++ Text files (currently only some relative paths)
+
+  * Open text files in a new tab (on clicking a button when hovering).
   
 ![image](youtube-video-gif.gif)
 
@@ -32,7 +38,7 @@ This extension currently supports:
 
 ## Extension Settings
 
-We registered the following commands (in package.json file):
+We registered some new commands (in package.json file), for example:
 
 ```json
 "commands": [
@@ -50,6 +56,14 @@ We registered the following commands (in package.json file):
 Preview Hover is called to activate the extension.
 
 newTabCommand is only called from inside the extension whenever a new tab must be displayed.
+
+If you want to add some new features to this project, check out [our tutorial](https://vscodeextensiondev.blogspot.com/2020/07/turorial.html)
+ 
+## About us:
+
+This is our computer science Bachelor degree final project.
+We developed an extension for visual studio code that currently previews images and youtube videos.
+We made our project an open source for other people to try and expand our extension to similar features (Pdf files, office file etc.)
 
 
 ## Known Issues
