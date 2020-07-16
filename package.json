@@ -76,12 +76,14 @@
 		"roots": [
 			"<rootDir>/src"
 		],
+		"testPathIgnorePatterns": ["<rootDir>/src/test"],
 		"watchPathIgnorePatterns": [
 			"<rootDir>/node_modules"
 		],
 		"collectCoverageFrom": [
 			"src/**/*.{ts,tsx,js}",
 			"!src/**/*.spec.{js,jsx}",
+			"!src/test/**/*.spec.{js,jsx}",
 			"!src/test"
 		],
 		"transform": {
