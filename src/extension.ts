@@ -25,7 +25,7 @@ export function activate(context: ExtensionContext) {
 	variablesUtils.hoverStringValue = new MarkdownString("", true);	
 	variablesUtils.hoverStringValue.isTrusted = true;
 
-	if(typeof variablesUtils.potentialUrl != 'undefined')
+	if(typeof variablesUtils.potentialUrl !== 'undefined')
 	{
 		variablesUtils.hoverStringValue = variablesUtils.currentPreviewObject.makeMrkdownString(variablesUtils.potentialUrl);
 	}
