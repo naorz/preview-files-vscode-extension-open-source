@@ -76,7 +76,9 @@
 		"roots": [
 			"<rootDir>/src"
 		],
-		"testPathIgnorePatterns": ["<rootDir>/src/test"],
+		"testPathIgnorePatterns": [
+			"<rootDir>/src/test"
+		],
 		"watchPathIgnorePatterns": [
 			"<rootDir>/node_modules"
 		],
