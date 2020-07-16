@@ -31,11 +31,11 @@ This extension currently supports:
 
   * Open text files in a new tab (on clicking a button when hovering).
   
-![image](youtube-video-gif.gif)
+![image](images/youtube-video-gif.gif)
 
-![image](images-working-gif.gif)
+![image](images/images-working-gif.gif)
 
-![image](textgif.gif)
+![image](images/textgif.gif)
 
 
 ## Extension Settings
