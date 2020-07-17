@@ -48,7 +48,7 @@ describe('imageObject', () => {
             expect(utils.variablesUtils.currentPreviewObject).toEqual(currentPreviewObject);
         });
 
-        it('check potentialUrl is not css file', () => {
+        it('check potentialUrl is not image file', () => {
             utils.variablesUtils.validateObject = new ValidateObject();
             utils.variablesUtils.potentialUrl = "blabla.txt";
             const currentPreviewObject = utils.variablesUtils.currentPreviewObject = {} as IPreviewObject
