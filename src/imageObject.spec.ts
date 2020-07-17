@@ -1,34 +1,35 @@
-import youtubeObject from './youtubeObject';
+import imageObject from './imageObject';
 import * as utils from './utils';
 import ValidateObject from './validationObject';
-import IPreviewObject from './IPreviewObject'
+import IPreviewObject from './IPreviewObject';
 
-describe('youtubeObject', () => {
+
+describe('imageObject', () => {
     it('Test constructor', () => {
         utils.variablesUtils.validateObject = new ValidateObject();
         jest.spyOn(utils.variablesUtils.validateObject, 'addValidateFunction').mockImplementation(() => { })
-        const instance = new youtubeObject();
-        expect(utils.variablesUtils.validateObject.addValidateFunction).toHaveBeenCalledWith('youtube', instance.validatePotentialUrl);
+        const instance = new imageObject();
+        expect(utils.variablesUtils.validateObject.addValidateFunction).toHaveBeenCalledWith('image', instance.validatePotentialUrl);
     });
 
     describe('validatePotentialUrl', () => {
 
-        it('should get youtube url', () => {
+        it('should get image file', () => {
             utils.variablesUtils.validateObject = new ValidateObject();
-            utils.variablesUtils.potentialUrl = "https://www.youtube.com/watch?v=xUPMcmns3DE&list=RDMMxUPMcmns3DE&start_radio=1";
-            utils.variablesUtils.previewObjectList.youtube = {} as youtubeObject //{} as IPreviewObject
-            const instance = new youtubeObject();
+            utils.variablesUtils.potentialUrl = "tiger.jpg";
+            utils.variablesUtils.previewObjectList.image = {} as imageObject //{} as IPreviewObject
+            const instance = new imageObject();
             const foundUrl = { url: undefined }
             instance.validatePotentialUrl(foundUrl)
             expect(foundUrl.url).toEqual(utils.variablesUtils.potentialUrl);
-            expect(utils.variablesUtils.currentPreviewObject).toEqual(utils.variablesUtils.previewObjectList.youtube);
+            expect(utils.variablesUtils.currentPreviewObject).toEqual(utils.variablesUtils.previewObjectList.image);
         });
 
         it('should do nothing when url is not undefined', () => {
             utils.variablesUtils.validateObject = new ValidateObject();
-            utils.variablesUtils.potentialUrl = "https://www.youtube.com/watch?v=xUPMcmns3DE&list=RDMMxUPMcmns3DE&start_radio=1";
+            utils.variablesUtils.potentialUrl = "blabla.png";
             const currentPreviewObject = utils.variablesUtils.currentPreviewObject = {} as IPreviewObject
-            const instance = new youtubeObject();
+            const instance = new imageObject();
             const url = 'shouldNotChange'
             const foundUrl = { url }
             instance.validatePotentialUrl(foundUrl)
@@ -40,18 +41,18 @@ describe('youtubeObject', () => {
             utils.variablesUtils.validateObject = new ValidateObject();
             utils.variablesUtils.potentialUrl = undefined;
             const currentPreviewObject = utils.variablesUtils.currentPreviewObject = {} as IPreviewObject
-            const instance = new youtubeObject();
+            const instance = new imageObject();
             const url = undefined;
             const foundUrl = { url }
             instance.validatePotentialUrl(foundUrl)
             expect(utils.variablesUtils.currentPreviewObject).toEqual(currentPreviewObject);
         });
 
-        it('check potentialUrl is not youtube url', () => {
+        it('check potentialUrl is not css file', () => {
             utils.variablesUtils.validateObject = new ValidateObject();
             utils.variablesUtils.potentialUrl = "blabla.txt";
             const currentPreviewObject = utils.variablesUtils.currentPreviewObject = {} as IPreviewObject
-            const instance = new youtubeObject();
+            const instance = new imageObject();
             const url = undefined
             const foundUrl = { url }
             instance.validatePotentialUrl(foundUrl)
