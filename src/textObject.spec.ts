@@ -44,6 +44,7 @@ describe('textObject', () => {
             const url = undefined;
             const foundUrl = { url }
             instance.validatePotentialUrl(foundUrl)
+            expect(foundUrl.url).toEqual(url);
             expect(utils.variablesUtils.currentPreviewObject).toEqual(currentPreviewObject);
         });
 
@@ -56,6 +57,8 @@ describe('textObject', () => {
             const foundUrl = { url }
             instance.validatePotentialUrl(foundUrl)
             expect(foundUrl.url).toEqual(url);
+            expect(utils.variablesUtils.currentPreviewObject).toEqual(currentPreviewObject);
+
         });
     });
 
