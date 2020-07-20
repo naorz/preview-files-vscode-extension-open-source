@@ -1,7 +1,22 @@
-oot = true
 
-[*.{json,js,ts,tsx,html,css,less,md,twig,vue}]
-charset = utf-8
-indent_style = space
-indent_size = 4
+# http://editorconfig.org
+# https://github.com/editorconfig/editorconfig/wiki/EditorConfig-Properties
+
+root = true
+
+[*]
 end_of_line = lf
+charset = utf-8
+indent_size = 2
+indent_style = space
+max_line_length = 130
+insert_final_newline = true
+trim_trailing_whitespace = true
+spaces_around_brackets = inside
+indent_brace_style = K&R
+
+[*.{js,jsx}]
+quote_type = single
+
+[*.md]
+trim_trailing_whitespace = false
