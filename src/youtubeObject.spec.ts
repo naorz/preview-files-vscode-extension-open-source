@@ -16,7 +16,7 @@ describe('youtubeObject', () => {
         it('should get youtube url', () => {
             utils.variablesUtils.validateObject = new ValidateObject();
             utils.variablesUtils.potentialUrl = "https://www.youtube.com/watch?v=xUPMcmns3DE&list=RDMMxUPMcmns3DE&start_radio=1";
-            utils.variablesUtils.previewObjectList.youtube = {} as youtubeObject //{} as IPreviewObject
+            utils.variablesUtils.previewObjectList.youtube = {} as youtubeObject
             const instance = new youtubeObject();
             const foundUrl = { url: undefined }
             instance.validatePotentialUrl(foundUrl)

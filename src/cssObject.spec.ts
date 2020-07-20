@@ -17,7 +17,7 @@ describe('cssObject', () => {
 		it('should get css file', () => {
 			utils.variablesUtils.validateObject = new ValidateObject();
 			utils.variablesUtils.potentialUrl = "blabla.css";
-			utils.variablesUtils.previewObjectList.css = {} as cssObject //{} as IPreviewObject
+			utils.variablesUtils.previewObjectList.css = {} as cssObject
 			const instance = new cssObject();
 			const foundUrl = { url: undefined }
 			instance.validatePotentialUrl(foundUrl)

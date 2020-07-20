@@ -16,7 +16,7 @@ describe('textObject', () => {
         it('should get text file', () => {
             utils.variablesUtils.validateObject = new ValidateObject();
             utils.variablesUtils.potentialUrl = "textfiletest.txt";
-            utils.variablesUtils.previewObjectList.text = {} as textObject //{} as IPreviewObject
+            utils.variablesUtils.previewObjectList.text = {} as textObject
             const instance = new textObject();
             const foundUrl = { url: undefined }
             instance.validatePotentialUrl(foundUrl)

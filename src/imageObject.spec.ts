@@ -17,7 +17,7 @@ describe('imageObject', () => {
         it('should get image file', () => {
             utils.variablesUtils.validateObject = new ValidateObject();
             utils.variablesUtils.potentialUrl = "tiger.jpg";
-            utils.variablesUtils.previewObjectList.image = {} as imageObject //{} as IPreviewObject
+            utils.variablesUtils.previewObjectList.image = {} as imageObject
             const instance = new imageObject();
             const foundUrl = { url: undefined }
             instance.validatePotentialUrl(foundUrl)
